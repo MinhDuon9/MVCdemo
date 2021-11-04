@@ -42,6 +42,19 @@ namespace MvcMovie.Migrations
 
                     b.ToTable("Movie");
                 });
+
+            modelBuilder.Entity("MvcMovie.Models.Student", b =>
+                {
+                    b.Property<string>("StudentId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("StudentName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("StudentId");
+
+                    b.ToTable("Student");
+                });
 #pragma warning restore 612, 618
         }
     }

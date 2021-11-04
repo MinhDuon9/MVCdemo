@@ -151,3 +151,8 @@ F:\University documents\LT .net 2\MvcMovie\MvcMovie\obj\Debug\net5.0\Razor\Views
 F:\University documents\LT .net 2\MvcMovie\MvcMovie\obj\Debug\net5.0\Razor\Views\Movies\Details.cshtml.g.cs
 F:\University documents\LT .net 2\MvcMovie\MvcMovie\obj\Debug\net5.0\Razor\Views\Movies\Edit.cshtml.g.cs
 F:\University documents\LT .net 2\MvcMovie\MvcMovie\obj\Debug\net5.0\Razor\Views\Movies\Index.cshtml.g.cs
+F:\University documents\LT .net 2\MvcMovie\MvcMovie\obj\Debug\net5.0\Razor\Views\Students\Create.cshtml.g.cs
+F:\University documents\LT .net 2\MvcMovie\MvcMovie\obj\Debug\net5.0\Razor\Views\Students\Delete.cshtml.g.cs
+F:\University documents\LT .net 2\MvcMovie\MvcMovie\obj\Debug\net5.0\Razor\Views\Students\Details.cshtml.g.cs
+F:\University documents\LT .net 2\MvcMovie\MvcMovie\obj\Debug\net5.0\Razor\Views\Students\Edit.cshtml.g.cs
+F:\University documents\LT .net 2\MvcMovie\MvcMovie\obj\Debug\net5.0\Razor\Views\Students\Index.cshtml.g.cs
