@@ -16,8 +16,24 @@ namespace MvcMovie.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.11")
+                .HasAnnotation("ProductVersion", "5.0.12")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("MvcMovie.Models.Employee", b =>
+                {
+                    b.Property<string>("EmployeeID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("EmployeeName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("EmployeeID");
+
+                    b.ToTable("Employee");
+                });
 
             modelBuilder.Entity("MvcMovie.Models.Movie", b =>
                 {
@@ -43,10 +59,45 @@ namespace MvcMovie.Migrations
                     b.ToTable("Movie");
                 });
 
+            modelBuilder.Entity("MvcMovie.Models.Person", b =>
+                {
+                    b.Property<string>("PersonID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("PersonName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PersonID");
+
+                    b.ToTable("Person");
+                });
+
+            modelBuilder.Entity("MvcMovie.Models.Product", b =>
+                {
+                    b.Property<string>("ProductID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProductName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Quantity")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("ProductID");
+
+                    b.ToTable("Product");
+                });
+
             modelBuilder.Entity("MvcMovie.Models.Student", b =>
                 {
                     b.Property<string>("StudentId")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("StudentName")
                         .HasColumnType("nvarchar(max)");
