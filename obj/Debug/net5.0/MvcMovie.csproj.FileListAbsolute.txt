@@ -171,3 +171,8 @@ F:\University documents\LT .net 2\MvcMovie\MvcMovie\obj\Debug\net5.0\Razor\Views
 F:\University documents\LT .net 2\MvcMovie\MvcMovie\obj\Debug\net5.0\Razor\Views\Products\Details.cshtml.g.cs
 F:\University documents\LT .net 2\MvcMovie\MvcMovie\obj\Debug\net5.0\Razor\Views\Products\Edit.cshtml.g.cs
 F:\University documents\LT .net 2\MvcMovie\MvcMovie\obj\Debug\net5.0\Razor\Views\Products\Index.cshtml.g.cs
+F:\University documents\LT .net 2\MvcMovie\MvcMovie\obj\Debug\net5.0\Razor\Views\Alumus\Create.cshtml.g.cs
+F:\University documents\LT .net 2\MvcMovie\MvcMovie\obj\Debug\net5.0\Razor\Views\Alumus\Delete.cshtml.g.cs
+F:\University documents\LT .net 2\MvcMovie\MvcMovie\obj\Debug\net5.0\Razor\Views\Alumus\Details.cshtml.g.cs
+F:\University documents\LT .net 2\MvcMovie\MvcMovie\obj\Debug\net5.0\Razor\Views\Alumus\Edit.cshtml.g.cs
+F:\University documents\LT .net 2\MvcMovie\MvcMovie\obj\Debug\net5.0\Razor\Views\Alumus\Index.cshtml.g.cs

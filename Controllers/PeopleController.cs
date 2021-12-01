@@ -56,12 +56,22 @@ namespace MvcMovie.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("PersonID,PersonName")] Person person)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _context.Add(person);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _context.Add(person);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
             }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "Khóa chính không được trùng  lặp:" + ex);
+            
+            }
+                
+            
             return View(person);
         }
 

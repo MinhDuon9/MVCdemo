@@ -64,12 +64,18 @@ namespace MvcMovie.Migrations
                     b.Property<string>("PersonID")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PersonName")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("PersonID");
 
-                    b.ToTable("Person");
+                    b.ToTable("People");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Person");
                 });
 
             modelBuilder.Entity("MvcMovie.Models.Product", b =>
@@ -80,8 +86,8 @@ namespace MvcMovie.Migrations
                     b.Property<string>("ProductName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Quantity")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("UnitPrice")
                         .HasColumnType("decimal(18,2)");
@@ -105,6 +111,24 @@ namespace MvcMovie.Migrations
                     b.HasKey("StudentId");
 
                     b.ToTable("Student");
+                });
+
+            modelBuilder.Entity("MvcMovie.Models.Alumus", b =>
+                {
+                    b.HasBaseType("MvcMovie.Models.Person");
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("School")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable("People");
+
+                    b.HasDiscriminator().HasValue("Alumus");
                 });
 #pragma warning restore 612, 618
         }
