@@ -1,22 +1,29 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MvcMovie.Models
 {
     public class Movie
     {
-        [DisplayName("Số")]
         public int Id { get; set; }
-        [DisplayName("Tên Phim")]
+
+        [StringLength(60, MinimumLength = 3)]
         public string Title { get; set; }
 
-        [DataType(DataType.Date)]
-        [DisplayName("Ngày")]
+        [Display(Name = "Release Date"), DataType(DataType.Date)]
         public DateTime ReleaseDate { get; set; }
-        [DisplayName("Thể loại")]
+
+        [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$"), Required, StringLength(30)]
         public string Genre { get; set; }
-        [DisplayName("Giá")]
+
+        [Range(1, 100), DataType(DataType.Currency)]
+        [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
+
+        [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$"), StringLength(5)]
+        public string Rating { get; set; }
     }
 }
